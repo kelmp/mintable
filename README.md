@@ -15,7 +15,7 @@ Mintable helps you:
 
 <br>
 
-[![](https://img.shields.io/github/workflow/status/kevinschaich/mintable/Test)](https://github.com/kevinschaich/mintable/actions?query=workflow%3ATest)
+[![](https://img.shields.io/github/actions/workflow/status/kevinschaich/mintable/test.yml?branch=master)](https://github.com/kevinschaich/mintable/actions?query=workflow%3ATest)
 [![](https://img.shields.io/npm/v/mintable)](https://www.npmjs.com/package/mintable)
 [![](https://img.shields.io/github/release/kevinschaich/mintable.svg)](https://github.com/kevinschaich/mintable/releases)
 [![](https://img.shields.io/github/license/kevinschaich/mintable.svg)](https://github.com/kevinschaich/mintable/blob/master/LICENSE)
@@ -26,6 +26,8 @@ Mintable helps you:
 ---
 
 ## Quickstart
+
+Requires `node >= v11.0.0`.
 
 1. Sign up for [Plaid's Free Plan](https://plaid.com/pricing/).
 2. Install Mintable:
@@ -56,15 +58,23 @@ Check out the full documentation [in the `./docs` folder](./docs/README.md).
 
 **Do I have to use Plaid?**
 
-Nope. You can [import transactions from a CSV bank statement](./docs/README.md#manually--on-your-local-machine--via-csv-bank-statements) exclusively on your local machine. We also have [templates](./docs/templates) to get you started.
+* Nope. You can [import transactions from a CSV bank statement](./docs/README.md#manually--on-your-local-machine--via-csv-bank-statements) exclusively on your local machine. We also have [templates](./docs/templates) to get you started.
 
 **Do I have to use Google Sheets?**
 
-Nope. You can [export your account balances & transactions to a CSV file](./docs/README.md#on-your-local-machine--via-csv-files) exclusively on your local machine.
+* Nope. You can [export your account balances & transactions to a CSV file](./docs/README.md#on-your-local-machine--via-csv-files) exclusively on your local machine.
 
 **Do I have to manually run this every time I want new transactions in my spreadsheet?**
 
-Nope. You can automate it for free using [BitBar](./docs/README.md#automatically-in-your-macs-menu-bar--via-bitbar), [`cron`](./docs/README.md#automatically-in-your-local-machines-terminal--via-cron), or [GitHub Actions](./docs/README.md#automatically-in-the-cloud--via-github-actions).
+* Nope. You can automate it for free using [BitBar](./docs/README.md#automatically-in-your-macs-menu-bar--via-bitbar), [`cron`](./docs/README.md#automatically-in-your-local-machines-terminal--via-cron), or [GitHub Actions](./docs/README.md#automatically-in-the-cloud--via-github-actions).
+
+**How do I use it with banks outside the US?**
+
+* Fork & edit the [country codes here](https://github.com/kevinschaich/mintable/blob/377257a6040ed9b6dd93d88435e53c48108b5806/src/integrations/plaid/plaidIntegration.ts#L126). Default support is for US banks.
+
+**How do I use it with Windows?**
+
+* Windows is not natively supported but you can try [this](https://github.com/kevinschaich/mintable/issues/125#issuecomment-1253961155).
 
 **It's not working!**
 
